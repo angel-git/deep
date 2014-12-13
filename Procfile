@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT -jar deep-ui/target/deep-ui-1.0-SNAPSHOT.jar
