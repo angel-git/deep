@@ -1,6 +1,5 @@
 package com.ags.deep.ui.coffee;
 
-import com.asual.lesscss.LessResource;
 import com.asual.lesscss.Resource;
 import com.asual.lesscss.ResourceNotFoundException;
 import com.asual.lesscss.ResourceServlet;
@@ -9,7 +8,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 /**
- * Created by Gavalda on 12/13/2014.
+ * Servlet that provides coffeescript to javascript.
  */
 public class CoffeeServlet extends ResourceServlet {
 

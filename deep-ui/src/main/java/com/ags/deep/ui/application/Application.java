@@ -2,6 +2,7 @@ package com.ags.deep.ui.application;
 
 import com.ags.deep.ui.coffee.CoffeeServlet;
 import com.asual.lesscss.LessServlet;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * Main SpringBoot configuration class.
  * Created by Gavalda on 12/13/2014.
  */
 
@@ -22,12 +24,17 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
+    @Value("${servlet.less.cache}")
+    private String lessCached;
+    @Value("${servlet.coffee.cache}")
+    private String coffeeCached;
 
     @Bean
     public ServletRegistrationBean servletRegistrationLessBean(){
         ServletRegistrationBean registrationBean = new ServletRegistrationBean(new LessServlet(), "*.less");
         registrationBean.setLoadOnStartup(1);
         registrationBean.setName("LessServlet");
+        registrationBean.addInitParameter("cache", lessCached);
         return registrationBean;
     }
 
@@ -36,6 +43,7 @@ public class Application {
         ServletRegistrationBean registrationBean = new ServletRegistrationBean(new CoffeeServlet(), "*.coffee");
         registrationBean.setLoadOnStartup(1);
         registrationBean.setName("CoffeeScript");
+        registrationBean.addInitParameter("cache",coffeeCached);
         return registrationBean;
     }
 

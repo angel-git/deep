@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.Scanner;
 
 /**
- * Created by Gavalda on 12/13/2014.
+ * Resource that handles the loading and compiling of coffeescript files.
  */
 public class CoffeeScriptResource extends ScriptResource {
 
@@ -27,7 +27,6 @@ public class CoffeeScriptResource extends ScriptResource {
     public byte[] getContent() throws IOException {
         if (content == null || (!cache && lastModified < getLastModified())) {
             logger.debug("Not using cache.");
-            //original content
             Scanner scanner;
             if (resource instanceof URL) {
                 scanner = new Scanner(((URL) resource).openStream(), "UTF-8").useDelimiter("\\A");
