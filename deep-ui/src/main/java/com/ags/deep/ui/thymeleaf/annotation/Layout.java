@@ -1,4 +1,4 @@
-package com.ags.deep.ui.annotation;
+package com.ags.deep.ui.thymeleaf.annotation;
 
 import java.lang.annotation.*;
 

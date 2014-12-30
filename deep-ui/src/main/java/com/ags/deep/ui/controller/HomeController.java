@@ -1,6 +1,6 @@
 package com.ags.deep.ui.controller;
 
-import com.ags.deep.ui.annotation.Layout;
+import com.ags.deep.ui.thymeleaf.annotation.Layout;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

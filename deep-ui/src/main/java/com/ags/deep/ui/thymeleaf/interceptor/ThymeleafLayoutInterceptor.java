@@ -1,6 +1,6 @@
-package com.ags.deep.ui.interceptor;
+package com.ags.deep.ui.thymeleaf.interceptor;
 
-import com.ags.deep.ui.annotation.Layout;
+import com.ags.deep.ui.thymeleaf.annotation.Layout;
 import org.springframework.util.Assert;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;

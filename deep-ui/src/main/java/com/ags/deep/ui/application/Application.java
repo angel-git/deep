@@ -1,7 +1,7 @@
 package com.ags.deep.ui.application;
 
 import com.ags.deep.ui.coffee.CoffeeServlet;
-import com.ags.deep.ui.interceptor.ThymeleafLayoutInterceptor;
+import com.ags.deep.ui.thymeleaf.interceptor.ThymeleafLayoutInterceptor;
 import com.asual.lesscss.LessServlet;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
