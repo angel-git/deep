@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/common :: head">
+    You shouldn't see this
+</head>
+<body>
+
+<header th:replace="fragments/header :: header"></header>
+<div th:replace="${view} :: content">
+    You shouldn't see this
+</div>
+<footer th:replace="fragments/footer :: footer">
+    You shouldn't see this
+</footer>
+
+
+
+<div th:replace="fragments/common :: js">
+    You shouldn't see this
+</div>
+</body>
+</html>

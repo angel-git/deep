@@ -1,5 +1,5 @@
 <head th:fragment="head">
-    <title>!!!</title>
+    <title>please change me</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!--styles-->
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css" />
@@ -9,3 +9,12 @@
     <link href="http://fonts.googleapis.com/css?family=Lato&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
 </head>
 
+
+<div th:fragment="js">
+    <!--javascript-->
+    <script type="text/javascript" src="../jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../angular/angular.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/bootstrap.min.js"></script>
+    <!--custom js-->
+    <script type="text/javascript" th:src="@{/coffee/main.coffee}"></script>
+</div>

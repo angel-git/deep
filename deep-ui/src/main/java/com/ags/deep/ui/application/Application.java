@@ -1,6 +1,7 @@
 package com.ags.deep.ui.application;
 
 import com.ags.deep.ui.coffee.CoffeeServlet;
+import com.ags.deep.ui.interceptor.ThymeleafLayoutInterceptor;
 import com.asual.lesscss.LessServlet;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -9,6 +10,8 @@ import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
  * Main SpringBoot configuration class.
@@ -18,7 +21,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan(basePackages = {"com.ags.deep"})
-public class Application {
+public class Application extends WebMvcConfigurerAdapter {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -47,6 +50,9 @@ public class Application {
         return registrationBean;
     }
 
-
-
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        super.addInterceptors(registry);
+        registry.addInterceptor(new ThymeleafLayoutInterceptor());
+    }
 }
