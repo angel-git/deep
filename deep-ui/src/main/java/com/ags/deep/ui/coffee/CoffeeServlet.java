@@ -8,7 +8,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 /**
- * Servlet that provides coffeescript to javascript.
+ * Servlet that provides the coffeescript resources
  */
 public class CoffeeServlet extends ResourceServlet {
 

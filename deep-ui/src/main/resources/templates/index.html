@@ -1,15 +1,8 @@
 <!DOCTYPE HTML>
 <html ng-app="myApp" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>!!!</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <!--styles-->
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css" />
-    <!--custom styles-->
-    <link rel="stylesheet" type="text/css" media="all"
-          href="../META-INF/resources/less/main.less" th:href="@{/less/main.less}" />
-</head>
+<head th:replace="fragments/head :: head"></head>
 <body>
+
 <header th:replace="fragments/header :: header"></header>
 <p>Hello spring thymeleaf!</p>
 <footer th:replace="fragments/footer :: footer"></footer>
