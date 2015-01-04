@@ -15,4 +15,14 @@ public class HomeController {
     public String getIndexPage() {
         return "intro";
     }
+
+    @RequestMapping("/login")
+    public String getLoginPage() {
+        return "login";
+    }
+
+    @RequestMapping("/welcome")
+    public String getWelcomePage() {
+        return "welcome";
+    }
 }
