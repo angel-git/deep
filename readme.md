@@ -1,5 +1,7 @@
 # DEEP
 
+## spring boot + thymeleaf + angularjs + less + coffeescript
+
 ## Intro
 Called ``deep`` because I couldn't figure out any name, sorry
 
