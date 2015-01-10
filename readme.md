@@ -1,7 +1,7 @@
 # DEEP
 
 ## Intro
-Called ``deep`` because I couldn't figure out another name :-)
+Called ``deep`` because I couldn't figure out any name, sorry
 
 ## Libraries
 - spring
